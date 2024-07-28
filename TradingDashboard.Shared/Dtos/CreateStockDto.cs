@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TradingDashboard.DataAccess.Entities
+﻿namespace TradingDashboard.Shared.Dtos
 {
-    public class Stock
+    public class CreateStockDto
     {
-        [Key]
-        public long StockId { get; set; }
         public required string Segment { get; set; }
         public required string Name { get; set; }
         public required string Exchange { get; set; }
@@ -22,10 +13,9 @@ namespace TradingDashboard.DataAccess.Entities
         public required string ExchangeToken { get; set; }
         public double TickSize { get; set; }
         public required string TradingSymbol { get; set; }
-        public string? ShortName { get; set; }
-        public string? SecurityType { get; set; }
-        public string? Sector {  get; set; }
+        public required string ShortName { get; set; }
+        public required string SecurityType { get; set; }
+        public string? Sector { get; set; }
         public string? Description { get; set; }
-        public List<StockWatchlistMap> StockWatchlistMaps { get; set; }
     }
 }

@@ -12,5 +12,6 @@ namespace TradingDashboard.DataAccess.Entities
         public long WatchlistId { get; set; }
         public required string Name { get; set; }
         public string? Description { get; set; }
+        public List<StockWatchlistMap> StockWatchlistMaps { get; set; }
     }
 }
